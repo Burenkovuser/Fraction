@@ -13,10 +13,7 @@
 @property int numerator, denumerator;
 
 -(void) print;
-//-(void) setNumerator:(int) n;
-//-(void) setDenumerator:(int) d;
--(int) numerator;
--(int) denumerator;
-- (double)convertToNum;
-
+-(double)convertToNum;
+-(void) setTo:(int) n over: (int) d; //метод задает два параметра числитель и знаменатель
+-(void) add: (Fraction*) f; //ссылка на объект класса Fraction в котором будет передаваться дробь (функция для сложения дробей). Будем вызывть объект дробь и прибавлять к нему другую дробь
 @end

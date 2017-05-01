@@ -17,15 +17,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    /*
     Fraction *myFraction = [[Fraction alloc] init];
     
     [myFraction setNumerator:1];
-    [myFraction setDenumerator:3];
+    myFraction.denumerator = 3;
     
     NSLog(@"Значение myFraction равно:");
     [myFraction print];
+    */
     
+    Fraction *aFraction = [[Fraction alloc] init];
+    Fraction *bFraction = [[Fraction alloc] init];
+    
+    [aFraction setTo:1 over:4];
+    [bFraction setTo:1 over:2];
+    
+    [aFraction print];
+    NSLog(@"+");
+    [bFraction print];
+    NSLog(@"=");
+    
+    [aFraction add:bFraction];
+    [aFraction print];
     
     
     return YES;
