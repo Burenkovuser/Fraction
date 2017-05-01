@@ -27,12 +27,22 @@
     numerator = n;
     denumerator = d;
 }
+/*
 - (void)add:(Fraction *)f {
     //сумма дробей a/b + c/d = ((a * d) + (b * c)) / b * d
     numerator = numerator * f.denumerator + denumerator * f.numerator;
     denumerator = denumerator * f.denumerator;
     
     [self reduce];// сокращаем дробь внутри метода отправляя add reduce
+}
+*/
+- (Fraction*) add:(Fraction *) f {
+    Fraction * result = [[Fraction alloc] init];
+    result.numerator = numerator * f.denumerator + denumerator * f.numerator;
+    result.denumerator = denumerator * f.denumerator;
+    
+    [result reduce];
+    return result;
 }
 
 -(void)reduce {
