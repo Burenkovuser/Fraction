@@ -41,6 +41,9 @@
     [aFraction add:bFraction];
     [aFraction print];
     
+    //[aFraction reduce];
+    //[aFraction print];
+    
     
     return YES;
 }

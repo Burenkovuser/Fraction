@@ -16,7 +16,6 @@
     NSLog(@"%i/%i", numerator, denumerator);
 }
 
-
 - (double)convertToNum {
     if (denumerator != 0) {
         return (double)numerator / denumerator;
@@ -32,6 +31,21 @@
     //сумма дробей a/b + c/d = ((a * d) + (b * c)) / b * d
     numerator = numerator * f.denumerator + denumerator * f.numerator;
     denumerator = denumerator * f.denumerator;
+    
+    [self reduce];// сокращаем дробь внутри метода отправляя add reduce
 }
 
+-(void)reduce {
+    int u = numerator; //6
+    int v = denumerator;//8
+    int temp;
+    
+    while (v != 0) {// выдим из цикла когда v будет равен нулю 6->8->2->0
+        temp = u % v;
+        u = v; // числителю присваиваем делитель u = 6 -> 6 -> 2
+        v = temp; // присваиваем делитею верменное значение 6 -> 2 -> 0
+    }
+    numerator /= u;
+    denumerator /=u;
+}
 @end
