@@ -20,6 +20,7 @@
 -(Fraction*) add: (Fraction*) f;
 -(void) reduce;  // приведелние к общему знаменталею
 -(Fraction*) multiply: (Fraction*) f;
+-(Fraction*) divide: (Fraction*) f;
 -(Fraction*) substract: (Fraction*) f;
 
 

@@ -68,7 +68,7 @@
     return result;
 }
 
--(Fraction*) substract: (Fraction*) f {
+-(Fraction*) divide: (Fraction*) f {
     //деление дробей (a/b) / (c/d) = (a * d) / (b * c)
     
     Fraction * result = [[Fraction alloc] init];
@@ -77,6 +77,17 @@
     
     [result reduce];
     return result;
+}
+
+-(Fraction*) substract: (Fraction*) f {
+    //вычитание дробей a/b - c/d = ((a * d) - (b * c)) / b * d
+    
+    Fraction *result = [[Fraction alloc] init];
+    result.numerator = (numerator * f.denumerator) - (denumerator * f.numerator);
+    result.denumerator = denumerator * f.denumerator;
+    
+    [result reduce];
+    return  result;
 }
 
 @end
