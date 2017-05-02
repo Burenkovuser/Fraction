@@ -58,4 +58,14 @@
     numerator /= u;
     denumerator /=u;
 }
+
+-(Fraction*) multiply: (Fraction*) f {
+    Fraction * result = [[Fraction alloc] init];
+    result.numerator = numerator * f.numerator;
+    result.denumerator = denumerator * f.denumerator;
+    
+    [result reduce];
+    return result;
+    
+}
 @end

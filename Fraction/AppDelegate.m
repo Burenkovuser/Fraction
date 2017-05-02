@@ -43,6 +43,13 @@
     resultFraction = [aFraction add:bFraction];
     [resultFraction print];
    
+    [aFraction print];
+    NSLog(@"*");
+    [bFraction print];
+    NSLog(@"=");
+    
+    resultFraction = [aFraction multiply:bFraction];
+    [resultFraction print];
     
     //[aFraction add:bFraction];
     //[aFraction print];
