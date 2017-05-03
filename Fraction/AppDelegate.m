@@ -28,6 +28,8 @@
     [myFraction print];
     */
     
+    id dataValue;
+    
     Fraction *aFraction = [[Fraction alloc] init];
     Fraction *bFraction = [[Fraction alloc] init];
     
@@ -97,6 +99,15 @@
     [c2 print];
     complexResult = [c1 add:c2];
     [complexResult print];
+    
+    //Динамически контроль типов и связывание. id может хранить любой тип данных. Система принимает решение о типе данных и его методе, во время выполнения, а не во время компиляции. В начале проверяется класс объекта хранящегося в id и затем определяется какой метод использовать.
+    
+    dataValue = f1;
+    [dataValue print];
+    
+    dataValue = c1;
+    [dataValue print];
+    
     
     
     //[aFraction add:bFraction];
