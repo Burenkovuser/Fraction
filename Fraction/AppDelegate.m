@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Fraction.h"
+#import "Complex.h"
 
 @interface AppDelegate ()
 
@@ -66,6 +67,36 @@
     
     resultFraction = [aFraction substract:bFraction];
     [resultFraction print];
+    
+    //Полиморфизм одно имя различные классы: у Fraction и Complex методы с одинаковыми названиями add имеющие разные реализацию, но в зависимости от получателя выбирается нужныq метод. Возможность использования одного имени в разных классах и есть полиморфизм.
+    
+    Fraction *f1 = [[Fraction alloc] init];
+    Fraction *f2 = [[Fraction alloc] init];
+    Fraction * fractionResult;
+    
+    Complex *c1 = [[Complex alloc] init];
+    Complex *c2 = [[Complex alloc] init];
+    Complex *complexResult;
+    
+    [f1 setTo:1 over:10];
+    [f2 setTo:2 over:15];
+    
+    [c1 setReal:18.0 andImaginary:2.5];
+    [c2 setReal:-5.0 andImaginary:3.2];
+    
+    //складыаем и выводим числа
+    [f1 print];
+    NSLog(@"+");
+    [f2 print];
+    fractionResult = [f1 add:f2];
+    [fractionResult print];
+    NSLog(@"\n");
+    
+    [c1 print];
+    NSLog(@"+");
+    [c2 print];
+    complexResult = [c1 add:c2];
+    [complexResult print];
     
     
     //[aFraction add:bFraction];

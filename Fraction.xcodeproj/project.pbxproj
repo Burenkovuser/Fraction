@@ -14,6 +14,7 @@
 		FBC53A501EB33C5F00497A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC53A4F1EB33C5F00497A63 /* Assets.xcassets */; };
 		FBC53A531EB33C5F00497A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC53A511EB33C5F00497A63 /* LaunchScreen.storyboard */; };
 		FBC53A5C1EB33C9A00497A63 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC53A5B1EB33C9A00497A63 /* Fraction.m */; };
+		FBC53B8D1EB9B4C400497A63 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC53B8C1EB9B4C400497A63 /* Complex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		FBC53A541EB33C5F00497A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBC53A5A1EB33C9A00497A63 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = SOURCE_ROOT; };
 		FBC53A5B1EB33C9A00497A63 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = SOURCE_ROOT; };
+		FBC53B8B1EB9B4C400497A63 /* Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		FBC53B8C1EB9B4C400497A63 /* Complex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complex.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 			children = (
 				FBC53A5A1EB33C9A00497A63 /* Fraction.h */,
 				FBC53A5B1EB33C9A00497A63 /* Fraction.m */,
+				FBC53B8B1EB9B4C400497A63 /* Complex.h */,
+				FBC53B8C1EB9B4C400497A63 /* Complex.m */,
 				FBC53A461EB33C5E00497A63 /* AppDelegate.h */,
 				FBC53A471EB33C5F00497A63 /* AppDelegate.m */,
 				FBC53A491EB33C5F00497A63 /* ViewController.h */,
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC53A4B1EB33C5F00497A63 /* ViewController.m in Sources */,
+				FBC53B8D1EB9B4C400497A63 /* Complex.m in Sources */,
 				FBC53A481EB33C5F00497A63 /* AppDelegate.m in Sources */,
 				FBC53A451EB33C5E00497A63 /* main.m in Sources */,
 				FBC53A5C1EB33C9A00497A63 /* Fraction.m in Sources */,
@@ -315,6 +321,7 @@
 				FBC53A591EB33C5F00497A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
