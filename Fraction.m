@@ -11,8 +11,28 @@
 @implementation Fraction
     
 @synthesize numerator, denumerator;
+/*
+- (id) initWithNumerator: (int) numer andDenominator: (int) denom
+{
+    self = [super init];
+    
+    if (self)
+    {
+        numerator = numer;
+        denumerator = denom;
+    }
+    
+    return self;
+}
+*/
 
 -(void)print {
+    int k;
+    if (numerator > denumerator) {
+        k = numerator / denumerator;
+        numerator = numerator - denumerator;
+        NSLog(@"%i %i/%i", k, numerator, denumerator);
+    }
     NSLog(@"%i/%i", numerator, denumerator);
 }
 
@@ -38,7 +58,7 @@
 */
 - (Fraction*) add:(Fraction *) f {
     Fraction * result = [[Fraction alloc] init];
-    result.numerator = numerator * f.denumerator + denumerator * f.numerator;
+    result.numerator = (numerator * f.denumerator) + (denumerator * f.numerator);
     result.denumerator = denumerator * f.denumerator;
     
     [result reduce];
@@ -89,5 +109,14 @@
     [result reduce];
     return  result;
 }
+/*
+-(Fraction *) invert
+{
+    Fraction *result = [[Fraction alloc] initWithNumerator:denumerator andDenominator:numerator];
+    [result reduce];
+    return result;
+    
+}
+*/
 
 @end

@@ -35,8 +35,8 @@
     
     Fraction *resultFraction;
     
-    [aFraction setTo:1 over:4];
-    [bFraction setTo:1 over:2];
+    [aFraction setTo:8 over:7];
+    [bFraction setTo:13 over:15];
     
     [aFraction print];
     NSLog(@"+");
@@ -69,6 +69,7 @@
     
     resultFraction = [aFraction substract:bFraction];
     [resultFraction print];
+    
     
     //Полиморфизм одно имя различные классы: у Fraction и Complex методы с одинаковыми названиями add имеющие разные реализацию, но в зависимости от получателя выбирается нужныq метод. Возможность использования одного имени в разных классах и есть полиморфизм.
     

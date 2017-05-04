@@ -12,6 +12,8 @@
 
 @property int numerator, denumerator;
 
+//- (id) initWithNumerator: (int) numer andDenominator: (int) denom;
+
 -(void) print;
 -(double)convertToNum;
 -(void) setTo:(int) n over: (int) d; //метод задает два параметра числитель и знаменатель
@@ -19,9 +21,11 @@
 
 -(Fraction*) add: (Fraction*) f;
 -(void) reduce;  // приведелние к общему знаменталею
--(Fraction*) multiply: (Fraction*) f;
--(Fraction*) divide: (Fraction*) f;
--(Fraction*) substract: (Fraction*) f;
+-(Fraction *) multiply: (Fraction *) f;
+-(Fraction *) divide: (Fraction *) f;
+-(Fraction *) substract: (Fraction *) f;
+
+//-(Fraction *) invert;
 
 
 @end
